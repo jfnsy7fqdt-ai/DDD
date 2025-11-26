@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dropify — Fresh streetwear drops</title>
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Dropify — modern clothing store with smooth animations and an enjoyable shopping experience." />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#">Dropify</a>
+      <nav class="nav">
+        <a href="#shop" class="nav-link">Shop</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+      <button id="cartBtn" class="cart-btn" aria-label="Open cart">
+        <svg class="cart-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor">
+          <path d="M6 6h15l-1.5 9h-12z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="10" cy="20" r="1" />
+          <circle cx="18" cy="20" r="1" />
+        </svg>
+        <span id="cartCount" class="cart-count">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy reveal">
+          <h1>Dropify — Streetwear that drops with style</h1>
+          <p>Curated limited drops, premium fabrics, fast shipping. Be first. Be bold.</p>
+          <a class="btn primary" href="#shop">Browse drops</a>
+        </div>
+        <div class="hero-image reveal" aria-hidden="true">
+          <img src="https://images.unsplash.com/photo-1531123414780-f1f5a6c5b4b0?w=1200&q=60&auto=format&fit=crop" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <section id="shop" class="section shop">
+      <div class="container">
+        <h2 class="section-title reveal">Featured Drops</h2>
+        <div id="products" class="product-grid">
+          <!-- product cards -->
+          <article class="product-card reveal" data-name="Nimbus Hoodie" data-price="79" data-image="https://images.unsplash.com/photo-1520975661060-3a7f56a6c2f1?w=800&q=60&auto=format&fit=crop">
+            <div class="product-media">
+              <img src="https://images.unsplash.com/photo-1520975661060-3a7f56a6c2f1?w=800&q=60&auto=format&fit=crop" alt="Nimbus Hoodie">
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Nimbus Hoodie</h3>
+              <p class="product-price">$79</p>
+              <div class="product-actions">
+                <button class="btn secondary quick-view">Quick view</button>
+                <button class="btn add-to-cart">Add to cart</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal" data-name="Axis Tee" data-price="29" data-image="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=800&q=60&auto=format&fit=crop">
+            <div class="product-media">
+              <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=800&q=60&auto=format&fit=crop" alt="Axis Tee">
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Axis Tee</h3>
+              <p class="product-price">$29</p>
+              <div class="product-actions">
+                <button class="btn secondary quick-view">Quick view</button>
+                <button class="btn add-to-cart">Add to cart</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal" data-name="Orbit Jacket" data-price="139" data-image="https://images.unsplash.com/photo-1542060748-5c5b17e6d7d1?w=800&q=60&auto=format&fit=crop">
+            <div class="product-media">
+              <img src="https://images.unsplash.com/photo-1542060748-5c5b17e6d7d1?w=800&q=60&auto=format&fit=crop" alt="Orbit Jacket">
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Orbit Jacket</h3>
+              <p class="product-price">$139</p>
+              <div class="product-actions">
+                <button class="btn secondary quick-view">Quick view</button>
+                <button class="btn add-to-cart">Add to cart</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal" data-name="Core Joggers" data-price="59" data-image="https://images.unsplash.com/photo-1503342452485-86d0e6d48a76?w=800&q=60&auto=format&fit=crop">
+            <div class="product-media">
+              <img src="https://images.unsplash.com/photo-1503342452485-86d0e6d48a76?w=800&q=60&auto=format&fit=crop" alt="Core Joggers">
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Core Joggers</h3>
+              <p class="product-price">$59</p>
+              <div class="product-actions">
+                <button class="btn secondary quick-view">Quick view</button>
+                <button class="btn add-to-cart">Add to cart</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section about">
+      <div class="container">
+        <h2 class="section-title reveal">About Dropify</h2>
+        <p class="reveal">Dropify curates limited streetwear drops made from premium materials. We focus on fit, function and making each drop memorable. Smooth shipping, friendly returns.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Dropify — Made for bold drops</p>
+    </div>
+  </footer>
+
+  <!-- Quick view / product modal -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button id="modalClose" class="modal-close" aria-label="Close">✕</button>
+      <div class="modal-content">
+        <div class="modal-media">
+          <img id="modalImage" src="" alt="">
+        </div>
+        <div class="modal-info">
+          <h3 id="modalTitle">Product</h3>
+          <p id="modalPrice" class="product-price"></p>
+          <p id="modalDesc">A clean description highlighting materials and fit. Limited drops — get it while it's hot.</p>
+          <div class="product-actions">
+            <button class="btn add-to-cart">Add to cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
